@@ -1,0 +1,7 @@
+.wrapper {
+  grid-area: main;
+  height: 80%;
+  background-image: url('/not-found-page.png');
+  background-position: center;
+  background-size: contain;
+}

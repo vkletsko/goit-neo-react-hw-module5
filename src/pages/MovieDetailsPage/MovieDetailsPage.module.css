@@ -1,0 +1,131 @@
+.details {
+  grid-area: main;
+}
+.goBack {
+  display: block;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  transition: 200ms ease-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.06);
+  }
+}
+.detailsInfo {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.5rem;
+  row-gap: 1.5rem;
+  padding: 1rem 0 2rem;
+  margin-bottom: 1.25rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+  }
+}
+.wrapper {
+  overflow: hidden;
+}
+.poster {
+  display: block;
+  aspect-ratio: 16 / 9;
+  transition: 500ms ease-in-out;
+}
+.meta {
+  h2 {
+    margin-bottom: 1.75rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #344767;
+    text-align: center;
+  }
+
+  & > p {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+
+    span:last-child {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      font-weight: 700;
+      color: #fff;
+      background-color: #44427e;
+      /* border-radius: 0.25rem; */
+    }
+  }
+
+  .genres {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      p {
+        padding: 0.25rem 0.5rem;
+        transition: 200ms ease;
+
+        &:hover {
+          background-color: #44427e;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.overview {
+  grid-column: 1/3;
+
+  h3 {
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  p {
+    padding: 0.5rem 1rem;
+    color: #344767;
+  }
+}
+
+.detailsNav {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  /* border-radius: 0.75rem; */
+}
+.detailsNavLink {
+  flex: 1 1 0;
+  text-align: center;
+  padding: 0.5rem 0;
+  color: #344767;
+
+  &:hover,
+  &:focus {
+    color: currentColor;
+  }
+
+  &.active {
+    background-color: #fff;
+    box-shadow: 0 1px 5px 1px #ddd;
+  }
+}

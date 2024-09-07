@@ -1,0 +1,28 @@
+.main {
+  grid-area: main;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 70%;
+  margin: 0 auto;
+}
+.searchField {
+  flex-grow: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d2d6da;
+  transition: 200ms ease-in-out;
+
+  &:focus {
+    border-color: #624ca3;
+    box-shadow: 0 0 0 2px rgb(255 0 128 / 20%);
+  }
+}
+
+.error {
+  padding: 1rem;
+  text-align: center;
+}

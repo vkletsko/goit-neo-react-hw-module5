@@ -1,0 +1,85 @@
+:root {
+  font-family: 'Open Sans', 'Inter', 'system-ui', 'Avenir', 'Helvetica', 'Arial',
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  color: #67748e;
+}
+
+#root {
+  display: grid;
+  grid-template-areas:
+    '. header .'
+    '. main .'
+    '. footer .';
+  grid-template-columns: 1.25rem minmax(20rem, 57.5rem) 1.25rem;
+  grid-template-rows: auto 1fr auto;
+  width: clamp(20rem, 100%, 62rem);
+  min-height: 100dvh;
+  margin: 0 auto;
+}
+
+h1 {
+  padding: 0.75rem 0;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #344767;
+}
+
+a {
+  font-weight: 500;
+  color: #344767;
+  text-decoration: inherit;
+  transition: 200ms ease-in;
+
+  &:hover,
+  &:focus {
+    color: #44427e;
+  }
+
+  &[href*='/movies/']:visited {
+    color: rgb(121 40 202 / 20%);
+  }
+}
+
+button {
+  padding: 0.6em 1.2em;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1em;
+  color: #fff;
+  background-color: #44427e;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 200ms ease;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+}
